@@ -3,7 +3,8 @@ defmodule NebulexRedisAdapter.MixProject do
 
   @source_url "https://github.com/cabol/nebulex_redis_adapter"
   @version "2.2.0"
-  @nbx_vsn "2.3.2"
+  @nbx_tag "2.4.1"
+  @nbx_vsn "2.4"
 
   def project do
     [
@@ -70,7 +71,7 @@ defmodule NebulexRedisAdapter.MixProject do
 
   defp nebulex_dep do
     if path = System.get_env("NEBULEX_PATH") do
-      {:nebulex, "~> #{@nbx_vsn}", path: path}
+      {:nebulex, "~> #{@nbx_tag}", path: path}
     else
       {:nebulex, "~> #{@nbx_vsn}"}
     end
